@@ -9,6 +9,7 @@ function respond() {
 //      botODB = /(.*\s+)(.*odb)(\s+.*)/i; 
       botRegexSh = /^\/shrug/; 
       botRegexBp = /^\/bp/;
+    botRegexRules = /^\/rules/i;
  /*     botRegexSiege = /^\/siege/; 
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; 
      siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
@@ -34,6 +35,17 @@ function respond() {
    else if(request.text && botRegexBp.test(request.text)) {
     this.res.writeHead(200);
     postMessage("r/bustypetite");
+    this.res.end();
+  } 
+  else if(request.text && botRegexRules.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("150 reps every day");
+    postMessage("If you miss 150, you start the next day with negative the difference");
+    postMessage("Fail to get to 150 twice in a row and you're out for 15 days");
+    postMessage("pushup (h) = 1 point");
+    postMessage("situp (t) = 1 point");
+    postMessage("squat jump (q) = 2 points");
+    postMessage("pullup (L) = 3 points");
     this.res.end();
   } 
   
