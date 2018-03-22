@@ -46,6 +46,18 @@ function respond() {
   } 
   
   else if(request.text && botRegexNateration.test(request.text)) {
+    var math = Math.random();
+    this.res.writeHead(200);
+    if(0.6 >= math > 0.3)
+      postMessage("I never bought OTC medicine " + math);
+    else if(math >0.6)
+      postMessage("I eat 6000 calories and don't gain weight " + math)
+    else
+      postMessage("I got laid in a Smith lounge " + math);
+    this.res.end();
+  } 
+  
+  /*else if(request.text && botRegexNateration.test(request.text)) {
     this.res.writeHead(200);
     if(0.6 >= Math.random() > 0.3)
       postMessage("I never bought OTC medicine");
@@ -54,7 +66,7 @@ function respond() {
     else
       postMessage("I got laid in a Smith lounge");
     this.res.end();
-  } 
+  } */
   
  /* else if(request.text && botRegexSiege.test(request.text)) {
     this.res.writeHead(200);
