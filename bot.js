@@ -10,6 +10,7 @@ function respond() {
       botRegexSh = /^\/shrug/; 
       botRegexBp = /^\/bp/;
     botRegexRules = /^\/rules/i;
+  botRegexNateration = /^\/nateration/i;
  /*     botRegexSiege = /^\/siege/; 
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; 
      siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
@@ -39,13 +40,19 @@ function respond() {
   } 
   else if(request.text && botRegexRules.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("150 reps every day");
-    postMessage("If you miss 150, you start the next day with negative the difference");
-    postMessage("Fail to get to 150 twice in a row and you're out for 15 days");
-    postMessage("pushup (h) = 1 point");
-    postMessage("situp (t) = 1 point");
-    postMessage("squat jump (q) = 2 points");
-    postMessage("pullup (L) = 3 points");
+    postMessage("150 reps every day. If you miss 150, you start the next day with negative the difference. Fail two days in a row and you're out.");
+    postMessage("pushup (h) = 1 point\nsitup (t) = 1 point\nsquat jump (q) = 2 points\npullup (L) = 3 points");
+    this.res.end();
+  } 
+  
+  else if(request.text && botRegexNateration.test(request.text)) {
+    this.res.writeHead(200);
+    if(0.6 >= Math.random() > 0.3)
+      postMessage("I never bought OTC medicine");
+    else if(Math.random() >0.6)
+      postMessage("I eat 6000 calories and don't gain weight")
+    else
+      postMessage("I got laid in a Smith lounge");
     this.res.end();
   } 
   
