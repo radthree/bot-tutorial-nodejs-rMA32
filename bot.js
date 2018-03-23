@@ -46,11 +46,25 @@ function respond() {
   } 
   
   else if(request.text && botRegexNateration.test(request.text)) {
-    var math = Math.random();
+    var math = 10 * Math.random();
     this.res.writeHead(200);
-    if(0.6 >= math > 0.3)
-      postMessage("I never bought OTC medicine " + math);
-    else if(math >0.6)
+    if(math >= 90)
+      postMessage("I have never bought OTC medicine " + math);
+    else if(math >=80)
+      postMessage("I eat 6000 calories daily and don't gain weight " + math)
+    else if(math >=70)
+      postMessage("My AOL screenname was \"nate\" " + math)
+    else if(math >=60)
+      postMessage("More than 50% of cars will be driverless by 2020 " + math)
+    else if(math >=50)
+      postMessage("I never use GPS at all " + math)
+    else if(math >=40)
+      postMessage("I\'ve never burped " + math)
+    else if(math >=30)
+      postMessage("I blew my load on her tits, definitely not on her ex's bed " + math)
+    else if(math >=20)
+      postMessage("I eat 6000 calories and don't gain weight " + math)
+    else if(math >=10)
       postMessage("I eat 6000 calories and don't gain weight " + math)
     else
       postMessage("I got laid in a Smith lounge " + math);
