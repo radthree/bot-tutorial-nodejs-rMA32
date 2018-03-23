@@ -36,7 +36,7 @@ function respond() {
   
   else if(request.text && botRegexSteg.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("             \/\\\n           \/\\  \/\\\n       \/\\\/\\      \/\\\n |||..^            ^^o\n------__\\ \/---\\ \/--~\n         | |    ||\n         --*    -*");
+    postMessage(".............\/\\\n...........\/\\..\/\\\n.......\/\\\/\\......\/\\\n.|||..^............^^o\n------__\\.\/---\\.\/--~\n.........|.|....||\n.........--*....-*");
     this.res.end();
   } 
   
