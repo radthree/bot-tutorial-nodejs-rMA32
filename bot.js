@@ -56,25 +56,25 @@ function respond() {
     var math = 100 * Math.random();
     this.res.writeHead(200);
     if(math >= 90)
-      postMessage("I have never bought OTC medicine " + math);
+      postMessage("I have never bought OTC medicine");
     else if(math >=80)
-      postMessage("I eat 6000 calories daily and don't gain weight " + math)
+      postMessage("I eat 6000 calories daily and don't gain weight")
     else if(math >=70)
-      postMessage("My AOL screenname was \"nate\" " + math)
+      postMessage("My AOL screenname was \"nate\"")
     else if(math >=60)
-      postMessage("More than 50% of cars will be driverless by 2020 " + math)
+      postMessage("More than 50% of cars will be driverless by 2020")
     else if(math >=50)
-      postMessage("I never use GPS at all " + math)
+      postMessage("I never use GPS at all")
     else if(math >=40)
-      postMessage("I\'ve never burped " + math)
+      postMessage("I\'ve never burped")
     else if(math >=30)
-      postMessage("I blew my load on her tits, definitely not on her ex's bed " + math)
+      postMessage("I blew my load on her tits, definitely not on her ex's bed")
     else if(math >=20)
-      postMessage("I eat 6000 calories and don't gain weight " + math)
+      postMessage("My parents only had sex two times")
     else if(math >=10)
-      postMessage("I eat 6000 calories and don't gain weight " + math)
+      postMessage("The Zeotrop was beautiful")
     else
-      postMessage("I got laid in a Smith lounge " + math);
+      postMessage("I got laid in a Smith lounge");
     this.res.end();
   } 
   
