@@ -46,7 +46,7 @@ function respond() {
   } 
   
   else if(request.text && botRegexNateration.test(request.text)) {
-    var math = 10 * Math.random();
+    var math = 100 * Math.random();
     this.res.writeHead(200);
     if(math >= 90)
       postMessage("I have never bought OTC medicine " + math);
