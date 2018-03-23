@@ -11,6 +11,7 @@ function respond() {
       botRegexBp = /^\/bp/;
     botRegexRules = /^\/rules/i;
   botRegexNateration = /^\/nateration/i;
+  botRegexSteg = /^\/steg/i;
  /*     botRegexSiege = /^\/siege/; 
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; 
      siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
@@ -30,6 +31,12 @@ function respond() {
   else if(request.text && botRegexSh.test(request.text)) {
     this.res.writeHead(200);
     postMessage("¯\\_(ツ)_/¯");
+    this.res.end();
+  } 
+  
+  else if(request.text && botRegexSteg.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("             \/\\\n           \/\\  \/\\\n       \/\\\/\\      \/\\\n |||..^            ^^o\n------__\\ \/---\\ \/--~\n         | |    ||\n         --*    -*");
     this.res.end();
   } 
   
