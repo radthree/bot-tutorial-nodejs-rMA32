@@ -49,7 +49,7 @@ function respond() {
    else if(request.text && botRegexBp.test(request.text)) {
     this.res.writeHead(200);
     var item = Math.floor(Math.random() * (bppix.length - 1 + 1)) + 1;
-    postMessage(bppix['item']);
+    postMessage(bppix['item' - 1]);
     this.res.end();
   } 
   
