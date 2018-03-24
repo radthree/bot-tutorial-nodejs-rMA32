@@ -14,8 +14,8 @@ function respond() {
   botRegexSteg = /^\/steg/i;
   botRegexbsn8 = /^\/bsn8/i;
   var bppix = [
-    "https://i.groupme.com/1280x1707.jpeg.b2b40bbcf9554aabbdf3c61c2d240e66.large";
-    "https://i.imgur.com/bAmp4sk.jpg";
+    "https://i.groupme.com/1280x1707.jpeg.b2b40bbcf9554aabbdf3c61c2d240e66.large",
+    "https://i.imgur.com/bAmp4sk.jpg"
     ];
     
  /*     botRegexSiege = /^\/siege/; 
