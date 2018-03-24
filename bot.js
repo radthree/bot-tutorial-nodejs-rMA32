@@ -50,7 +50,7 @@ function respond() {
     this.res.writeHead(200);
     var item = Math.floor(Math.random() * (bppix.length - 1 + 1)) + 1;
      item = item - 1;
-     postMessage("" + item + "\n");
+  //   postMessage("" + item + "\n");
     postMessage(bppix[item]);
     this.res.end();
   } 
