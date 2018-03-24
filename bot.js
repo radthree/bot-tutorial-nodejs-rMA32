@@ -17,6 +17,20 @@ function respond() {
     'https://i.groupme.com/1280x1707.jpeg.b2b40bbcf9554aabbdf3c61c2d240e66.large',
     'https://i.imgur.com/bAmp4sk.jpg'
     ];
+  var claims = [
+    'I have never bought OTC medicine',
+    'I eat 6000 calories daily and don\'t gain weight',
+    'My AOL screenname was \"nate\"',
+    'More than 50% of cars will be driverless by 2020',
+    'I never use GPS at all',
+    'Using GPS while driving is more dangerous than having a txt conversation',
+    'I\'ve never burped',
+    'I blew my load on her tits, definitely not on her ex\'s bed',
+    'My parents only had sex two times',
+    'The Zeotrope was beautiful',
+    'I got laid in a Smith lounge'
+    ];
+    
     
  /*     botRegexSiege = /^\/siege/; 
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; 
@@ -69,28 +83,10 @@ function respond() {
   } 
   
   else if(request.text && botRegexNateration.test(request.text)) {
-    var math = 100 * Math.random();
     this.res.writeHead(200);
-    if(math >= 90)
-      postMessage("I have never bought OTC medicine");
-    else if(math >=80)
-      postMessage("I eat 6000 calories daily and don't gain weight")
-    else if(math >=70)
-      postMessage("My AOL screenname was \"nate\"")
-    else if(math >=60)
-      postMessage("More than 50% of cars will be driverless by 2020")
-    else if(math >=50)
-      postMessage("I never use GPS at all")
-    else if(math >=40)
-      postMessage("I\'ve never burped")
-    else if(math >=30)
-      postMessage("I blew my load on her tits, definitely not on her ex's bed")
-    else if(math >=20)
-      postMessage("My parents only had sex two times")
-    else if(math >=10)
-      postMessage("The Zeotrope was beautiful")
-    else
-      postMessage("I got laid in a Smith lounge");
+    var item = Math.floor(Math.random() * (bppix.length - 1 + 1)) + 1;
+     item = item - 1;
+    postMessage(claims[item]);
     this.res.end();
   } 
   
