@@ -12,6 +12,12 @@ function respond() {
     botRegexRules = /^\/rules/i;
   botRegexNateration = /^\/nateration/i;
   botRegexSteg = /^\/steg/i;
+  botRegexbsn8 = /^\/bsn8/i;
+  var bppix = [
+    'https://i.groupme.com/1280x1707.jpeg.b2b40bbcf9554aabbdf3c61c2d240e66.large';
+    'https://i.imgur.com/bAmp4sk.jpg';
+    ];
+    
  /*     botRegexSiege = /^\/siege/; 
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; 
      siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
@@ -42,9 +48,17 @@ function respond() {
   
    else if(request.text && botRegexBp.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("r/bustypetite");
+    item = Math.floor(Math.random() * (bppix.length - 1 + 1)) + 1;
+    postMessage("r/bustypetite" + item);
     this.res.end();
   } 
+  
+  else if(request.text && botRegexbsn8.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("\/!\\ THE BOT HAS DETECTED A NATERATION. YOU HAVE 5 MINUTES TO SUBSTANTIATE YOUR CLAIM \/!\\");
+    this.res.end();
+  } 
+  
   else if(request.text && botRegexRules.test(request.text)) {
     this.res.writeHead(200);
     postMessage("150 reps every day. If you miss 150, you start the next day with negative the difference. Fail two days in a row and you're out.");
@@ -72,7 +86,7 @@ function respond() {
     else if(math >=20)
       postMessage("My parents only had sex two times")
     else if(math >=10)
-      postMessage("The Zeotrop was beautiful")
+      postMessage("The Zeotrope was beautiful")
     else
       postMessage("I got laid in a Smith lounge");
     this.res.end();
