@@ -16,6 +16,7 @@ function respond() {
   var bppix = [
     'https://i.groupme.com/1280x1707.jpeg.b2b40bbcf9554aabbdf3c61c2d240e66.large',
     'https://i.imgur.com/bAmp4sk.jpg'
+    'https://v.groupme.com/23325633/2018-03-24T20:31:40Z/3b3252e3.320x568r.mp4'
     ];
   var claims = [
     'I have never bought OTC medicine',
