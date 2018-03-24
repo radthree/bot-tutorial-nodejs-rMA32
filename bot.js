@@ -15,8 +15,7 @@ function respond() {
   botRegexbsn8 = /^\/bsn8/i;
   var bppix = [
     'https://i.groupme.com/1280x1707.jpeg.b2b40bbcf9554aabbdf3c61c2d240e66.large',
-    'https://i.imgur.com/bAmp4sk.jpg',
-    'https://v.groupme.com/23325633/2018-03-24T20:31:40Z/3b3252e3.320x568r.mp4'
+    'https://i.imgur.com/bAmp4sk.jpg'
     ];
   var claims = [
     'I have never bought OTC medicine',
@@ -85,7 +84,7 @@ function respond() {
   
   else if(request.text && botRegexNateration.test(request.text)) {
     this.res.writeHead(200);
-    var item = Math.floor(Math.random() * (bppix.length - 1 + 1)) + 1;
+    var item = Math.floor(Math.random() * (claims.length - 1 + 1)) + 1;
      item = item - 1;
     postMessage(claims[item]);
     this.res.end();
