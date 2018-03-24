@@ -48,8 +48,8 @@ function respond() {
   
    else if(request.text && botRegexBp.test(request.text)) {
     this.res.writeHead(200);
-    item = Math.floor(Math.random() * (bppix.length - 1 + 1)) + 1;
-    postMessage("r/bustypetite" + item);
+    var item = Math.floor(Math.random() * (bppix.length - 1 + 1)) + 1;
+    postMessage("r/bustypetite = " + item);
     this.res.end();
   } 
   
