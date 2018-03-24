@@ -14,8 +14,8 @@ function respond() {
   botRegexSteg = /^\/steg/i;
   botRegexbsn8 = /^\/bsn8/i;
   var bppix = [
-    "https://i.groupme.com/1280x1707.jpeg.b2b40bbcf9554aabbdf3c61c2d240e66.large",
-    "https://i.imgur.com/bAmp4sk.jpg"
+    'https://i.groupme.com/1280x1707.jpeg.b2b40bbcf9554aabbdf3c61c2d240e66.large',
+    'https://i.imgur.com/bAmp4sk.jpg'
     ];
     
  /*     botRegexSiege = /^\/siege/; 
@@ -49,7 +49,9 @@ function respond() {
    else if(request.text && botRegexBp.test(request.text)) {
     this.res.writeHead(200);
     var item = Math.floor(Math.random() * (bppix.length - 1 + 1)) + 1;
-    postMessage(bppix['item' - 1]);
+     item = item - 1;
+     postMessage("item\n");
+    postMessage(bppix[item]);
     this.res.end();
   } 
   
