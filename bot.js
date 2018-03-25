@@ -7,12 +7,13 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy/;  
 //      botODB = /(.*\s+)(.*odb)(\s+.*)/i; 
-      botRegexSh = /^\/shrug/; 
-      botRegexBp = /^\/bp/;
+      botRegexSh = /^\/shrug/i; 
+      botRegexBp = /^\/bp/i;
     botRegexRules = /^\/rules/i;
   botRegexNateration = /^\/nateration/i;
   botRegexSteg = /^\/steg/i;
   botRegexbsn8 = /^\/bsn8/i;
+  botRegexAbout = /^\/about/i;
   var bppix = [
     'https://i.groupme.com/1280x1707.jpeg.b2b40bbcf9554aabbdf3c61c2d240e66.large',
     'https://i.imgur.com/bAmp4sk.jpg',
@@ -58,6 +59,12 @@ function respond() {
 
   else if(request.text && botRegexSh.test(request.text)) {
     this.res.writeHead(200);
+    postMessage("WDBbot v4.20.braao");
+    this.res.end();
+  } 
+  
+  else if(request.text && botRegexSh.test(request.text)) {
+    this.res.writeHead(200);
     postMessage("¯\\_(ツ)_/¯");
     this.res.end();
   } 
@@ -85,7 +92,7 @@ function respond() {
   
   else if(request.text && botRegexRules.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("150 reps every day. If you miss 150, you start the next day with negative the difference. Fail two days in a row and you're out.");
+    postMessage("150 points every day. If you miss 150, you start the next day with negative the difference. Fail two days in a row and you're out.");
     postMessage("pushup (h) = 1 point\nsitup (t) = 1 point\nsquat jump (q) = 2 points\npullup (L) = 3 points");
     this.res.end();
   } 
