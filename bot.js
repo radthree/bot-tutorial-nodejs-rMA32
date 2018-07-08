@@ -14,6 +14,7 @@ function respond() {
   botRegexSteg = /^\/steg/i;
   botRegexbsn8 = /^\/bsn8/i;
   botRegexAbout = /^\/about/i;
+  botRegexrps = /^\/rps/i;
   var bppix = [
     'https://i.groupme.com/1280x1707.jpeg.b2b40bbcf9554aabbdf3c61c2d240e66.large',
     'https://i.imgur.com/bAmp4sk.jpg',
@@ -24,7 +25,58 @@ function respond() {
     'https://i.imgur.com/rffG8qM.jpg',
     'https://i.redd.it/ouvr5augdvn01.jpg',
     'https://scontent.cdninstagram.com/vp/69a9460a1fef963b1bf5297ecb569faa/5B6FA078/t51.2885-15/s640x640/sh0.08/e35/13557016_1028316843919536_1452646181_n.jpg',
-    'https://i.pinimg.com/736x/25/48/6c/25486c1bfeb1d9642ff9273c568186a8--sexy-nice.jpg'
+    'https://i.pinimg.com/736x/25/48/6c/25486c1bfeb1d9642ff9273c568186a8--sexy-nice.jpg',
+    'https://i.groupme.com/600x1008.jpeg.4addb0f7c20e4a0b9880c9f3f0b8c14c.large',
+    'https://i.groupme.com/533x967.jpeg.510303cdc5784cceb2e26885041970dc.large',
+    'https://i.groupme.com/692x952.jpeg.47846583da6547efae728bfcdfdef483.large',
+    'https://i.groupme.com/812x1080.jpeg.3b2fafbfbc4141c1bc10aab293793507.large',
+    'https://i.groupme.com/1241x1500.jpeg.df8687a6a1b146e6ba762585ed86843b.large',
+    'https://i.groupme.com/844x1500.jpeg.b8233a8e7436458fa662cf2718cdfdab.large',
+    'https://i.groupme.com/475x844.jpeg.63cb1dd788d74923b25fd8bc2ba09445.large',
+    'https://i.groupme.com/812x938.jpeg.62984ded18824a73b0ef000ae6d48d88.large',
+    'https://i.groupme.com/1024x685.jpeg.f486a77d7bbe4867a5e4a8e790e97344.large',
+    'https://i.groupme.com/750x1000.jpeg.5724a98ac9114e1fac4d1658c677edf1.large',
+    'https://i.groupme.com/620x457.jpeg.ff33b8589b174f9e98a607ef58635c70.large',
+    'https://i.groupme.com/810x1440.jpeg.c4ba089e26b34d98833571f30a35a3c8.large',
+    'https://i.groupme.com/240x364.jpeg.181ab72da28944f3a4f242d78373a5d0.large',
+    'https://i.imgur.com/ReYpvxH.jpg',
+    'https://i.groupme.com/546x842.jpeg.9c7b7e7d617246b6b98bdba20b782724.large',
+    'https://i.imgur.com/zkGBeyL.jpg',
+    'https://i.imgur.com/8QRLFMW.jpg',
+    'https://i.redd.it/h4zqoeuz95q01.jpg',
+    'https://i.redd.it/bz7lc6bmf2q01.jpg',
+    'https://i.imgur.com/9TdHaHN.jpg',
+    'https://i.imgur.com/dqT3JBD.png',
+    'https://i.imgur.com/fRD7njS.png',
+    'https://i.imgur.com/uEbL51l.jpg',
+    'https://i.imgur.com/ztfCfyf.jpg',
+    'https://i.imgur.com/McOaeSD.jpg',
+    'https://i.imgur.com/X26K30E.jpg',
+    'https://i.imgur.com/Ni8HUcg.jpg',
+    'https://i.imgur.com/sAfYSlf.jpg',
+    'https://i.imgur.com/egjTOZi.jpg',
+    'https://i.imgur.com/Xn6cUIE.jpg',
+    'https://i.imgur.com/cBgAXZY.jpg',
+    'https://i.imgur.com/wtHhNsT.jpg',
+    'https://i.imgur.com/4moZyn1.jpg',
+    'https://i.imgur.com/cSfgagi.jpg',
+    'https://i.imgur.com/l3O6CL6.jpg',
+    'https://i.imgur.com/NIhUJIY.jpg',
+    'https://i.imgur.com/OFtBquT.jpg',
+    'https://i.imgur.com/OFtBquT.jpg',
+    'https://i.imgur.com/VOFmdBR.jpg',
+    'https://i.imgur.com/K30Co3n.jpg',
+    'https://i.imgur.com/PD7m2q1.jpg',
+    'https://i.imgur.com/GsHvXcd.jpg',
+    'https://i.imgur.com/hlJxaFt.jpg',
+    'https://i.imgur.com/KBIcoCF.jpg',
+    'https://i.imgur.com/lcUf7ga.jpg',
+    'https://i.imgur.com/P79fZUS.jpg',
+    'https://i.imgur.com/vnhsUXe.jpg',
+    'https://i.imgur.com/kpSAYYT.png',
+    'https://i.imgur.com/sHup8b4.jpg',
+    'https://i.imgur.com/OIEczHn.jpg',
+    'https://i.imgur.com/D93vlOa.jpg'
     ];
   var claims = [
     'I have never bought OTC medicine',
@@ -37,7 +89,15 @@ function respond() {
     'I blew my load on her tits, definitely not on her ex\'s bed',
     'My parents only had sex two times',
     'The Zeotrope was beautiful',
-    'I got laid in a Smith lounge'
+    'I got laid in a Smith lounge',
+    'My parents have the tallest pine tree east of the Mississippi in their backyard',
+    'I\'ll one day go to the grave knowing I banged 2 chicks in Gecko\'s childhood bed',
+    'I am busy'
+    ];
+  var rps = [
+    'rock',
+    'paper',
+    'scissors'
     ];
     
     
@@ -57,7 +117,7 @@ function respond() {
   }
 
 
-  else if(request.text && botRegexSh.test(request.text)) {
+  else if(request.text && botRegexAbout.test(request.text)) {
     this.res.writeHead(200);
     postMessage("WDBbot v4.20.braao");
     this.res.end();
@@ -102,6 +162,14 @@ function respond() {
     var item = Math.floor(Math.random() * (claims.length - 1 + 1)) + 1;
      item = item - 1;
     postMessage(claims[item]);
+    this.res.end();
+  } 
+  
+  else if(request.text && botRegexrps.test(request.text)) {
+    this.res.writeHead(200);
+    var item = Math.floor(Math.random() * (claims.length - 1 + 1)) + 1;
+     item = item - 1;
+    postMessage(" "+ item + " " + rps[item]);
     this.res.end();
   } 
   
