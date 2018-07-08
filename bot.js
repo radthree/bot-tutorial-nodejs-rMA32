@@ -169,7 +169,7 @@ function respond() {
     this.res.writeHead(200);
     var item = Math.floor(Math.random() * (rps.length - 1));
      // item = item - 1;
-    postMessage(" "+ item + " " + rps[item]);
+    postMessage(" "+ item + " " + rps[item] + rps.length);
     this.res.end();
   } 
   
