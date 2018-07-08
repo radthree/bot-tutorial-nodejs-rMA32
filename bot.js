@@ -167,7 +167,7 @@ function respond() {
   
   else if(request.text && botRegexrps.test(request.text)) {
     this.res.writeHead(200);
-    var item = Math.floor(Math.random() * (rps.length - 1));
+    var item = Math.floor(Math.random() * (rps.length));
      // item = item - 1;
     postMessage(" "+ item + " " + rps[item] + " " + rps.length + " " + rps[0] + " " + rps[1] + " " + rps[2]);
     this.res.end();
