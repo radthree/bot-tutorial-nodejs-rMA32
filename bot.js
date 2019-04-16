@@ -122,7 +122,7 @@ else if(request.text && botRegex500.test(request.text)) {
     var one_day=1000*60*60*24;
     e = new Date();
     d=Math.floor((1597941020000-e)/one_day);
-    postMessage(""+d);
+    postMessage(""+d+" days left");
     this.res.end();
   } 
   
