@@ -121,7 +121,7 @@ else if(request.text && botRegex500.test(request.text)) {
     this.res.writeHead(200);
     var one_day=1000*60*60*24;
     e = new Date();
-    d=Math.trunc((1597941020000-e)/one_day);
+    d=Math.floor((1597941020000-e)/one_day);
     postMessage(d);
     this.res.end();
   } 
