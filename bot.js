@@ -15,6 +15,7 @@ function respond() {
   botRegexbsn8 = /^\/bsn8/i;
   botRegexAbout = /^\/about/i;
   botRegexrps = /^\/rps/i;
+  botRegex500 = /^\/500/i;
   var bppix = [
     'https://i.groupme.com/1280x1707.jpeg.b2b40bbcf9554aabbdf3c61c2d240e66.large',
     'https://i.imgur.com/bAmp4sk.jpg',
@@ -116,7 +117,15 @@ function respond() {
     this.res.end();
   }
 
-
+else if(request.text && botRegex500.test(request.text)) {
+    this.res.writeHead(200);
+    var one_day=1000*60*60*24;
+    e = new Date();
+    d=Math.trunc((1597941020000-e)/one_day);
+    postMessage(d);
+    this.res.end();
+  } 
+  
   else if(request.text && botRegexAbout.test(request.text)) {
     this.res.writeHead(200);
     postMessage("WDBbot v4.20.braao");
